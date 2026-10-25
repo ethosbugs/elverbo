@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>El verbo: estudio en 1 hora</title>
+<style>
+:root{--bg:#f2f4f8;--card:#fff;--ink:#16203a;--mut:#5d6785;--acc:#3342c4;--acc2:#b0246b;--line:#dde2ee;--soft:#e8ebfa;--ok:#14703c;--bad:#b3261e;--okb:#e2f4e8;--badb:#fbe6e4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10131c;--card:#181c28;--ink:#e6e9f5;--mut:#9aa4c4;--acc:#9aa7ff;--acc2:#f08bbd;--line:#2a3045;--soft:#222849;--ok:#6fd49a;--bad:#ff9a92;--okb:#16301f;--badb:#3a1c1a}}
+:root[data-theme="dark"]{--bg:#10131c;--card:#181c28;--ink:#e6e9f5;--mut:#9aa4c4;--acc:#9aa7ff;--acc2:#f08bbd;--line:#2a3045;--soft:#222849;--ok:#6fd49a;--bad:#ff9a92;--okb:#16301f;--badb:#3a1c1a}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+h1,h2,h3{font-family:"Iowan Old Style",Palatino,"Palatino Linotype",Georgia,serif;line-height:1.2;margin:0}
+h1{font-size:clamp(1.7rem,5vw,2.4rem);letter-spacing:-.01em}
+h2{font-size:1.45rem;margin:0 0 .8rem}
+h3{font-size:1.08rem;margin:0 0 .4rem}
+header,main{max-width:1040px;margin:0 auto;padding:0 1rem}
+header{padding-top:1.4rem;padding-bottom:.6rem}
+header p{margin:.4rem 0 0;color:var(--mut);max-width:60ch}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--bg);border-bottom:1px solid var(--line)}
+nav div{max-width:1040px;margin:0 auto;display:flex;gap:.3rem;overflow-x:auto;padding:.5rem 1rem;scrollbar-width:none}
+nav button{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:.5rem .95rem;border-radius:999px;font:inherit;font-size:.95rem;cursor:pointer}
+nav button[aria-selected=true]{background:var(--acc);border-color:var(--acc);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) nav button[aria-selected=true]{color:#10131c}}
+section{display:none;padding:1.4rem 0 3rem}
+section.on{display:block}
+.grid{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.1rem}
+.card p{margin:.3rem 0}
+.wide{grid-column:1/-1}
+.mut{color:var(--mut)}
+.small{font-size:.9rem}
+em.ex{color:var(--mut)}
+b.e,.e{color:var(--acc);font-weight:700}
+.aux{color:var(--acc2);font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0}
+.chip{background:var(--soft);border-radius:8px;padding:.45rem .7rem;text-align:center;min-width:5.5rem}
+.chip b{display:block;font-size:1.3rem;font-family:Georgia,serif}
+.chip span{font-size:.78rem;color:var(--mut)}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{padding:.35rem .5rem;border-bottom:1px solid var(--line);text-align:left}
+th{font-weight:600;color:var(--mut)}
+.scroll{overflow-x:auto}
+.tl{border-left:3px solid var(--acc);padding-left:.8rem;margin:.6rem 0}
+.tl.alt{border-color:var(--acc2)}
+.bar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.bar button,.btn{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:.55rem 1rem;border-radius:8px;font:inherit;cursor:pointer}
+.bar button[aria-pressed=true]{background:var(--soft);border-color:var(--acc);color:var(--acc);font-weight:700}
+.btn.p{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:600}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.p{color:#10131c}}
+h3.m{margin:1.2rem 0 .6rem;color:var(--mut);font-size:1rem}
+.tc h3{display:flex;justify-content:space-between;gap:.5rem;align-items:baseline}
+.tc h3 small{font-weight:400;color:var(--mut);font-size:.8rem}
+.row{display:flex;gap:.6rem;padding:.12rem 0;border-bottom:1px dashed var(--line)}
+.row:last-child{border:0}
+.row i{font-style:normal;color:var(--mut);width:5.4rem;flex:none;font-size:.88rem}
+.plan li{list-style:none;margin:.35rem 0}
+.plan ul{padding:0;margin:.5rem 0 0}
+.plan label{display:flex;gap:.6rem;align-items:flex-start;cursor:pointer}
+.plan input{margin-top:.35rem;width:1.1rem;height:1.1rem;accent-color:var(--acc)}
+.plan input:checked+span{text-decoration:line-through;color:var(--mut)}
+.min{font-family:Georgia,serif;font-size:1.5rem;color:var(--acc);line-height:1}
+.q{font-size:1.25rem;font-family:Georgia,serif;margin:.5rem 0 1rem}
+.q b{color:var(--acc)}
+.ans{display:flex;gap:.5rem;flex-wrap:wrap}
+.ans input[type=text]{flex:1 1 200px;min-width:0;font:inherit;font-size:1.15rem;padding:.6rem .8rem;border:2px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+.ans input:focus,button:focus-visible{outline:3px solid var(--acc);outline-offset:1px}
+.res{margin-top:1rem;padding:.8rem 1rem;border-radius:8px;display:none}
+.res.ok{display:block;background:var(--okb);color:var(--ok)}
+.res.no{display:block;background:var(--badb);color:var(--bad)}
+.res .e,.res .aux{color:inherit}
+.res u{text-decoration-thickness:2px}
+.score{display:flex;gap:1.5rem;margin-top:1rem;color:var(--mut)}
+.score b{color:var(--ink);font-size:1.2rem}
+select{font:inherit;padding:.5rem;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+</style>
+</head>
+<body>
+<header>
+<h1>El verbo</h1>
+<p>Todo el temario en cinco bloques cortos, con los trucos de la guía y una zona de práctica. Calculado para estudiarlo en una hora.</p>
+</header>
+<nav><div id="tabs" role="tablist"></div></nav>
+<main>
+
+<section id="plan">
+<h2>Plan de 60 minutos</h2>
+<div class="grid plan">
+<div class="card"><div class="min">10 min</div><h3>Base</h3><ul><li><label><input type="checkbox"><span>Estructura: lexema, vocal temática y desinencias</span></label></li><li><label><input type="checkbox"><span>Persona, número, tiempo, modo y voz</span></label></li></ul><p><button class="btn" data-go="base">Ir a Base</button></p></div>
+<div class="card"><div class="min">10 min</div><h3>Clases de verbos</h3><ul><li><label><input type="checkbox"><span>Regulares e irregulares (3 señales)</span></label></li><li><label><input type="checkbox"><span>Auxiliares, pronominales y defectivos</span></label></li></ul><p><button class="btn" data-go="clases">Ir a Clases</button></p></div>
+<div class="card"><div class="min">15 min</div><h3>Conjugar los modelos</h3><ul><li><label><input type="checkbox"><span>Cantar, temer y partir: terminaciones resaltadas</span></label></li><li><label><input type="checkbox"><span>Tiempos compuestos = haber + participio</span></label></li></ul><p><button class="btn" data-go="conjugar">Ir a Conjugar</button></p></div>
+<div class="card"><div class="min">10 min</div><h3>Trucos de memoria</h3><ul><li><label><input type="checkbox"><span>Las 3 familias de tiempos</span></label></li><li><label><input type="checkbox"><span>Pistas visuales e irregularidades</span></label></li></ul><p><button class="btn" data-go="trucos">Ir a Trucos</button></p></div>
+<div class="card"><div class="min">15 min</div><h3>Practicar</h3><ul><li><label><input type="checkbox"><span>15 preguntas aleatorias</span></label></li><li><label><input type="checkbox"><span>10 aciertos seguidos en modo «Todo»</span></label></li></ul><p><button class="btn p" data-go="practica">Ir a Practicar</button></p></div>
+</div>
+</section>
+
+<section id="base">
+<h2>Base teórica</h2>
+<div class="grid">
+<div class="card"><h3>Qué es un verbo</h3><p>Clase de palabra que expresa acción, proceso, estado o sentimiento. Se nombra en infinitivo y es el núcleo del sintagma verbal (SV).</p>
+<p class="small"><b>Acción:</b> Luis <i>lee</i> una novela.<br><b>Proceso:</b> Luis <i>duerme</i> profundamente.<br><b>Estado:</b> Luis <i>permanece</i> en casa.</p></div>
+<div class="card"><h3>Estructura de la forma verbal</h3><p>Lexema + desinencias. Ejemplo: <i>temeremos</i> (tem-e-re-mos).</p>
+<div class="chips"><div class="chip"><b>tem</b><span>lexema</span></div><div class="chip"><b>e</b><span>vocal temática</span></div><div class="chip"><b>re</b><span>tiempo, modo, aspecto</span></div><div class="chip"><b>mos</b><span>persona, número</span></div></div>
+<p class="small mut">La vocal temática no tiene significado: sirve para clasificar. 1ª: am-<b class="e">a</b>-r. 2ª: tem-<b class="e">e</b>-r. 3ª: part-<b class="e">i</b>-r.</p></div>
+<div class="card"><h3>Persona y número</h3>
+<table><tr><th></th><th>Singular</th><th>Plural</th></tr><tr><td>1ª (habla)</td><td>yo hablo</td><td>nosotros hablamos</td></tr><tr><td>2ª (oyente)</td><td>tú lees</td><td>vosotros leéis</td></tr><tr><td>3ª (otro)</td><td>él sale</td><td>ellos salen</td></tr></table></div>
+<div class="card"><h3>Tiempo</h3><p>Anterior (<b>pretérito</b>), simultáneo (<b>presente</b>) o posterior (<b>futuro</b>) al momento en que se habla. Algunas formas se refieren a otra acción: en <i>cuando vengan yo ya me habré dormido</i>, «habré dormido» es anterior a «vengan».</p>
+<p><b>Simples:</b> una palabra (<i>jugó, íbamos</i>).<br><b>Compuestos:</b> haber + participio (<i>he jugado, habrían encontrado</i>).</p></div>
+<div class="card wide"><h3>Modo: actitud del hablante</h3>
+<div class="grid">
+<div class="tl"><b>Indicativo</b><br>Hechos reales y objetivos.<br><em class="ex">Él come una manzana.</em></div>
+<div class="tl alt"><b>Subjuntivo</b><br>Deseo, duda, probabilidad, necesidad.<br><em class="ex">Ojalá que deje de llover. Si yo pensara.</em></div>
+<div class="tl"><b>Imperativo</b><br>Ruego, petición u orden.<br><em class="ex">¡Cierra esa ventana! Cómprame la bici.</em></div></div></div>
+<div class="card wide"><h3>Voz</h3>
+<div class="grid"><div class="tl"><b>Activa:</b> sujeto agente, realiza la acción.<br><em class="ex">Colón descubrió América en 1492.</em></div>
+<div class="tl alt"><b>Pasiva:</b> sujeto paciente, recibe la acción; el agente va en un complemento (ser + participio).<br><em class="ex">América fue descubierta por Colón en 1492.</em></div></div></div>
+</div>
+</section>
+
+<section id="clases">
+<h2>Clases de verbos</h2>
+<div class="grid">
+<div class="card"><h3>Regulares</h3><p>Siguen uno de los tres modelos: <b>amar, temer, partir</b>.</p></div>
+<div class="card"><h3>Irregulares</h3><p>Se apartan del modelo en la raíz, la desinencia o ambas. Tres señales:</p>
+<table><tr><td>Presente</td><td>mover &gt; <b>mue</b>vo</td></tr><tr><td>Pretérito</td><td>sentir &gt; s<b>i</b>ntió, mentir &gt; m<b>i</b>ntió</td></tr><tr><td>Futuro</td><td>saber &gt; sa<b>br</b>á, poder &gt; po<b>dr</b>á</td></tr></table></div>
+<div class="card"><h3>Auxiliares</h3><p>Se unen a una forma no personal (infinitivo, gerundio, participio) de otro verbo.</p>
+<p><b class="aux">haber</b> + participio: tiempos compuestos. <i>Ana ha llegado pronto.</i></p>
+<p><b class="aux">ser</b> + participio: voz pasiva. <i>La ciudad fue destruida por un terremoto.</i></p>
+<p><b class="aux">echar, estar, venir</b>…: perífrasis verbales. <i>Pedro echó a correr. Luisa está preparando una sorpresa.</i></p></div>
+<div class="card"><h3>Pronominales</h3><p>Se conjugan con pronombre átono: yo <b>me</b> arrepiento, tú <b>te</b> arrepientes, él <b>se</b> arrepiente, nosotros <b>nos</b> arrepentimos, vosotros <b>os</b> arrepentís, ellos <b>se</b> arrepienten.</p>
+<p><b>Exclusivamente:</b> arrepentirse, quejarse, fugarse, atreverse, jactarse.<br><b>Ocasionalmente:</b> caer/caerse, levantar/levantarse, ir/irse.</p></div>
+<div class="card wide"><h3>Defectivos: no se usan en todas las formas</h3>
+<table><tr><td><b>abolir</b></td><td>Solo formas cuya desinencia empieza por -i: <i>abolió</i>.</td></tr>
+<tr><td><b>atañer</b></td><td>Solo 3ª persona: <i>atañe</i>.</td></tr>
+<tr><td><b>balbucir</b></td><td>Sin las formas con grupo -zc-: <i>balbucía</i>.</td></tr>
+<tr><td><b>concernir</b></td><td>3ª persona de presente de indicativo y subjuntivo y de pretérito imperfecto de indicativo: <i>concierne, conciernen, concierna, conciernan, concernía, concernían</i>; y el gerundio <i>concerniendo</i>.</td></tr>
+<tr><td><b>soler</b></td><td>Presentes de indicativo y subjuntivo y pretérito imperfecto de indicativo: <i>suelo, suelas, solía</i>; participio <i>solido</i>.</td></tr></table></div>
+</div>
+</section>
+
+<section id="conjugar">
+<h2>Conjugar los modelos</h2>
+<div class="bar" id="vbar"></div>
+<p class="small mut">En <span class="e">azul</span> la desinencia; en <span class="aux">rosa</span> el auxiliar haber. Las formas compuestas no cambian: solo cambia el participio.</p>
+<div id="conj"></div>
+</section>
+
+<section id="trucos">
+<h2>Trucos de memoria</h2>
+<div class="grid">
+<div class="card wide"><h3>Haber: los 8 tiempos que debes saber</h3><p class="small mut">Con ellos formas todos los compuestos de cualquier verbo.</p><div class="scroll" id="hab"></div></div>
+<div class="card"><h3>Familia 1: el «yo» del presente</h3><p>La irregularidad de <i>yo</i> pasa al presente de subjuntivo y al imperativo.</p>
+<p>tener &gt; <b>teng</b>o &gt; <b>teng</b>a, <b>teng</b>as<br>poner &gt; <b>pong</b>o &gt; <b>pong</b>a, <b>pong</b>as<br>decir &gt; <b>dig</b>o &gt; <b>dig</b>a, <b>dig</b>as</p></div>
+<div class="card"><h3>Familia 2: «ellos» del pretérito</h3><p>Quita <b>-ron</b> y añade la terminación:</p>
+<p>cantaron &gt; canta- &gt; cantara / cantase / cantare<br>tuvieron &gt; tuvie- &gt; tuviera / tuviese / tuviere</p>
+<p class="small mut">Sirve para el imperfecto y el futuro de subjuntivo.</p></div>
+<div class="card"><h3>Familia 3: el infinitivo</h3><p><b>Futuro:</b> infinitivo + é, ás, á, emos, éis, án.<br><b>Condicional:</b> infinitivo + ía, ías, ía, íamos, íais, ían.</p>
+<p>cantar &gt; cantar<b>é</b>, cantar<b>ía</b><br>Irregulares: saber &gt; sabré, poner &gt; pondré</p></div>
+<div class="card"><h3>Persona y número casi universales</h3>
+<table><tr><td>yo</td><td>-o (presente) o vacío</td></tr><tr><td>tú</td><td>-s</td></tr><tr><td>él</td><td>vacío</td></tr><tr><td>nosotros</td><td>-mos</td></tr><tr><td>vosotros</td><td>-is (-áis, -éis, -ís)</td></tr><tr><td>ellos</td><td>-n</td></tr></table>
+<p class="small mut">Cuidado: el pretérito perfecto simple tiene las suyas (-é, -aste, -ó, -amos, -asteis, -aron) y la 2ª persona del singular acaba en -ste.</p></div>
+<div class="card"><h3>Pistas visuales</h3>
+<table><tr><td>Imperfecto, -ar</td><td>lleva <b>-aba-</b>: cantaba</td></tr><tr><td>Imperfecto, -er/-ir</td><td>lleva <b>-ía-</b>: temía, partía</td></tr><tr><td>Presente subj.</td><td>vocal invertida: -ar &gt; <b>e</b> (cante), -er/-ir &gt; <b>a</b> (tema, parta)</td></tr><tr><td>Condicional</td><td><b>-ría</b> pegado al infinitivo: cantaría</td></tr></table></div>
+<div class="card"><h3>Irregularidades frecuentes</h3>
+<p><b>Diptongación</b> (e &gt; ie, o &gt; ue) solo si el acento cae en la raíz: quiero, pero queremos; muevo, pero movemos.</p>
+<p><b>Cierre vocálico</b> (e &gt; i): pido, pidió, pidiera.</p>
+<p><b>Futuro y condicional:</b> pierden la vocal (sabré, no «saberé») o añaden -d- (pondré).</p></div>
+</div>
+</section>
+
+<section id="practica">
+<h2>Practicar</h2>
+<div class="card">
+<div class="bar" style="align-items:center">
+<label for="mode" class="small mut">Modo</label>
+<select id="mode"><option value="all">Todo</option><option value="s">Solo tiempos simples</option><option value="c">Solo tiempos compuestos</option><option value="sub">Solo subjuntivo</option><option value="irr">Irregulares</option></select>
+<label class="small"><input type="checkbox" id="acc" checked> Exigir tildes</label>
+</div>
+<div class="q" id="q">Pulsa «Nueva pregunta» para empezar.</div>
+<div class="ans"><input type="text" id="inp" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Escribe la forma verbal" aria-label="Respuesta"><button class="btn p" id="chk">Comprobar</button></div>
+<div class="bar" style="margin:.8rem 0 0"><button class="btn" id="nxt">Nueva pregunta</button><button class="btn" id="hint">Pista</button></div>
+<div class="res" id="res" role="status"></div>
+<div class="score"><span>Aciertos <b id="sc">0</b> / <b id="tot">0</b></span><span>Racha <b id="st">0</b></span></div>
+</div>
+</section>
+</main>
+
+<script>
+const $=s=>document.querySelector(s);
+const PR=['yo','tú','él / ella','nosotros','vosotros','ellos / ellas'];
+const F=['é','ás','á','emos','éis','án'],C=['ía','ías','ía','íamos','íais','ían'];
+const D={ar:{pres:['o','as','a','amos','áis','an'],imp:['aba','abas','aba','ábamos','abais','aban'],pret:['é','aste','ó','amos','asteis','aron'],subp:['e','es','e','emos','éis','en'],subi:['ara','aras','ara','áramos','arais','aran'],subis:['ase','ases','ase','ásemos','aseis','asen'],subf:['are','ares','are','áremos','areis','aren'],imv:['a','e','emos','ad','en']},
+er:{pres:['o','es','e','emos','éis','en'],imp:['ía','ías','ía','íamos','íais','ían'],pret:['í','iste','ió','imos','isteis','ieron'],subp:['a','as','a','amos','áis','an'],subi:['iera','ieras','iera','iéramos','ierais','ieran'],subis:['iese','ieses','iese','iésemos','ieseis','iesen'],subf:['iere','ieres','iere','iéremos','iereis','ieren'],imv:['e','a','amos','ed','an']}};
+D.ir={...D.er,pres:['o','es','e','imos','ís','en'],imv:['e','a','amos','id','an']};
+const H={pres:['he','has','ha','hemos','habéis','han'],imp:D.er.imp.map(e=>'hab'+e),pret:['hube','hubiste','hubo','hubimos','hubisteis','hubieron'],fut:F.map(e=>'habr'+e),cond:C.map(e=>'habr'+e),subp:['haya','hayas','haya','hayamos','hayáis','hayan'],subi:D.er.subi.map(e=>'hub'+e),subis:D.er.subis.map(e=>'hub'+e),subf:D.er.subf.map(e=>'hub'+e)};
+const S=[['pres','Presente','Indicativo'],['imp','Pretérito imperfecto','Indicativo'],['pret','Pretérito perfecto simple','Indicativo'],['fut','Futuro','Indicativo'],['cond','Condicional','Indicativo'],['subp','Presente','Subjuntivo'],['subi','Pretérito imperfecto','Subjuntivo'],['subf','Futuro','Subjuntivo']];
+const K=[['pres','Pretérito perfecto compuesto','Indicativo'],['imp','Pretérito pluscuamperfecto','Indicativo'],['pret','Pretérito anterior','Indicativo'],['fut','Futuro perfecto','Indicativo'],['cond','Condicional perfecto','Indicativo'],['subp','Pretérito perfecto compuesto','Subjuntivo'],['subi','Pretérito pluscuamperfecto','Subjuntivo'],['subf','Futuro perfecto','Subjuntivo']];
+const part=i=>i.slice(0,-2)+(i.endsWith('ar')?'ado':'ido');
+const pair=(i,k,p)=>{const r=i.slice(0,-2),c=i.slice(-2);return k==='fut'?[i,F[p]]:k==='cond'?[i,C[p]]:[r,D[c][k][p]]};
+const alt=(i,k,p)=>{const r=i.slice(0,-2),c=i.slice(-2);return [r,D[c].subis[p]]};
+const hl=([a,b])=>a+'<b class="e">'+b+'</b>';
+const hc=(a,pt)=>'<b class="aux">'+a+'</b> '+pt;
+function cell(i,sim,k,p){
+ if(sim){let h=hl(pair(i,k,p));return k==='subi'?h+' / '+hl(alt(i,k,p)):h}
+ const pt=part(i);let h=hc(H[k][p],pt);return k==='subi'?h+' / '+hc(H.subis[p],pt):h}
+function answers(i,sim,k,p){
+ if(sim){const a=[pair(i,k,p).join('')];if(k==='subi')a.push(alt(i,k,p).join(''));return a}
+ const pt=part(i),a=[H[k][p]+' '+pt];if(k==='subi')a.push(H.subis[p]+' '+pt);return a}
+function tenseCard(i,sim,t){
+ let rows=PR.map((n,p)=>'<div class="row"><i>'+n+'</i><span>'+cell(i,sim,t[0],p)+'</span></div>').join('');
+ return '<div class="card tc"><h3>'+t[1]+'</h3>'+rows+'</div>'}
+function conj(i){
+ const c=i.slice(-2),r=i.slice(0,-2),im=D[c].imv,g=c==='ar'?'ando':'iendo';
+ const grp=(tt,sim)=>tt.map(t=>tenseCard(i,sim,t)).join('');
+ const sec=(t,sim,m)=>'<h3 class="m">'+t+'</h3><div class="grid">'+grp((sim?S:K).filter(x=>x[2]===m),sim)+'</div>';
+ const imvRows=['tú','él / ella','nosotros/-as','vosotros/-as','ellos / ellas'].map((n,x)=>'<div class="row"><i>'+n+'</i><span>'+hl([r,im[x]])+'</span></div>').join('');
+ return sec('Indicativo, tiempos simples',1,'Indicativo')+sec('Indicativo, tiempos compuestos',0,'Indicativo')+sec('Subjuntivo, simples',1,'Subjuntivo')+sec('Subjuntivo, compuestos',0,'Subjuntivo')+
+ '<h3 class="m">Imperativo y formas no personales</h3><div class="grid"><div class="card tc"><h3>Imperativo</h3>'+imvRows+'</div><div class="card"><h3>Formas no personales</h3><p><b>Infinitivo:</b> '+hl([r,c])+' / haber '+part(i)+'<br><b>Gerundio:</b> '+hl([r,g])+' / habiendo '+part(i)+'<br><b>Participio:</b> '+hl([r,c==='ar'?'ado':'ido'])+'</p></div></div>'}
+// pestañas
+const TB=[['plan','Plan'],['base','Base'],['clases','Clases'],['conjugar','Conjugar'],['trucos','Trucos'],['practica','Practicar']];
+function show(id){if(!TB.some(t=>t[0]===id))id='plan';document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id===id));document.querySelectorAll('#tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.t===id));scrollTo(0,0)}
+$('#tabs').innerHTML=TB.map(t=>'<button role="tab" data-t="'+t[0]+'">'+t[1]+'</button>').join('');
+$('#tabs').onclick=e=>{if(e.target.dataset.t)show(e.target.dataset.t)};
+document.addEventListener('click',e=>{if(e.target.dataset.go)show(e.target.dataset.go)});
+// modelos
+const VB=['cantar','temer','partir'];
+$('#vbar').innerHTML=VB.map((v,x)=>'<button data-v="'+v+'" aria-pressed="'+(x===0)+'">'+(x+1)+'ª conjugación: '+v+'</button>').join('');
+function setV(v){$('#conj').innerHTML=conj(v);document.querySelectorAll('#vbar button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===v))}
+$('#vbar').onclick=e=>{if(e.target.dataset.v)setV(e.target.dataset.v)};setV('cantar');
+// tabla de haber
+(function(){const ts=[['pres','presente'],['imp','imperfecto'],['pret','pretérito'],['fut','futuro'],['cond','condicional'],['subp','pres. subj.'],['subi','imperf. subj.'],['subf','futuro subj.']];
+let h='<table><tr><th></th>'+ts.map(t=>'<th>'+t[1]+'</th>').join('')+'</tr>';
+PR.forEach((n,p)=>{h+='<tr><th>'+n+'</th>'+ts.map(t=>'<td class="aux">'+H[t[0]][p]+(t[0]==='subi'?' / '+H.subis[p]:'')+'</td>').join('')+'</tr>'});
+$('#hab').innerHTML=h+'</table>'})();
+// práctica
+const PV=['cantar','temer','partir','amar','hablar','comer','beber','correr','vivir','subir','aprender','bailar','trabajar','vender','decidir','saltar'];
+const IR=[['Presente, yo','tener','tengo','Irregular en la 1ª persona: teng-o. Pasa al subjuntivo y al imperativo.'],['Presente, yo','decir','digo','Cierre e a i y -g-: dig-o.'],['Presente, yo','mover','muevo','Diptongación o a ue: el acento cae en la raíz.'],['Presente, nosotros','querer','queremos','Sin diptongo: el acento no cae en la raíz.'],['Presente de subjuntivo, yo','poner','ponga','Parte del «yo» del presente: pongo.'],['Presente de subjuntivo, yo','decir','diga','Parte de «digo».'],['Presente de subjuntivo, yo','tener','tenga','Parte de «tengo».'],['Pretérito perfecto simple, él','pedir','pidió','Cierre vocálico e a i.'],['Pretérito perfecto simple, él','sentir','sintió','Cambio en el pretérito.'],['Pretérito perfecto simple, él','mentir','mintió','Igual que sentir.'],['Futuro, yo','saber','sabré','Pierde la vocal temática.'],['Futuro, yo','poner','pondré','Aparece una -d-.'],['Futuro, él','poder','podrá','Pierde la vocal temática: podr-á.'],['Futuro, yo','tener','tendré','Aparece una -d-.'],['Condicional, yo','querer','querría','Pierde la vocal temática: querr-ía.'],['Pretérito imperfecto de subjuntivo, ellos','tener','tuvieran/tuviesen','Parte de «tuvieron»: quita -ron y añade -ra o -se.']];
+let cur=null,done=false,sc=0,tot=0,st=0;
+const norm=s=>{s=s.trim().toLowerCase().replace(/\s+/g,' ');return $('#acc').checked?s:s.normalize('NFD').replace(/[\u0300-\u036f]/g,'')};
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+function next(){
+ const m=$('#mode').value;done=false;$('#res').className='res';$('#inp').value='';
+ if(m==='irr'){const x=pick(IR);cur={ans:x[2].split('/'),show:'<b class="e">'+x[2].split('/').join(' / ')+'</b>',tip:x[3]};$('#q').innerHTML=x[0]+' de <b>'+x[1]+'</b>'}
+ else{let pool=[];S.forEach((t,x)=>pool.push([1,x]));K.forEach((t,x)=>pool.push([0,x]));
+  if(m==='s')pool=pool.filter(x=>x[0]);if(m==='c')pool=pool.filter(x=>!x[0]);if(m==='sub')pool=pool.filter(x=>(x[0]?S:K)[x[1]][2]==='Subjuntivo');
+  const [sim,x]=pick(pool),t=(sim?S:K)[x],i=pick(PV),p=Math.floor(Math.random()*6);
+  cur={ans:answers(i,sim,t[0],p),show:cell(i,sim,t[0],p),tip:''};
+  $('#q').innerHTML=t[1]+' de '+t[2].toLowerCase()+', <b>'+PR[p]+'</b>, del verbo <b>'+i+'</b>'}
+ $('#inp').focus()}
+function check(){
+ if(!cur)return next();if(done)return next();
+ const v=norm($('#inp').value);if(!v)return;
+ done=true;tot++;const ok=cur.ans.some(a=>norm(a)===v),r=$('#res');
+ if(ok){sc++;st++;r.className='res ok';r.innerHTML='Correcto: '+cur.show}
+ else{st=0;r.className='res no';r.innerHTML='No es correcto. Respuesta: '+cur.show+(cur.tip?'<br><span class="small">'+cur.tip+'</span>':'')}
+ $('#sc').textContent=sc;$('#tot').textContent=tot;$('#st').textContent=st;$('#chk').textContent='Siguiente'}
+$('#nxt').onclick=()=>{next();$('#chk').textContent='Comprobar'};
+$('#chk').onclick=()=>{check();if(!done)$('#chk').textContent='Comprobar'};
+$('#inp').onkeydown=e=>{if(e.key==='Enter'){const was=done;check();if(was)$('#chk').textContent='Comprobar'}};
+$('#mode').onchange=()=>{next();$('#chk').textContent='Comprobar'};
+$('#hint').onclick=()=>{if(!cur||done)return;const a=cur.ans[0];$('#inp').placeholder='Empieza por: '+a.slice(0,2)+'… ('+a.length+' letras)';$('#inp').focus()};
+show((location.hash||'').slice(1));
+</script>
+</body>
+</html>
