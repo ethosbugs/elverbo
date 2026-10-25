@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>El verbo: estudio en 1 hora</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233342c4'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' font-weight='700' text-anchor='middle' fill='white'%3Ev%3C/text%3E%3C/svg%3E">
 <style>
 :root{--bg:#f2f4f8;--card:#fff;--ink:#16203a;--mut:#5d6785;--acc:#3342c4;--acc2:#b0246b;--line:#dde2ee;--soft:#e8ebfa;--ok:#14703c;--bad:#b3261e;--okb:#e2f4e8;--badb:#fbe6e4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10131c;--card:#181c28;--ink:#e6e9f5;--mut:#9aa4c4;--acc:#9aa7ff;--acc2:#f08bbd;--line:#2a3045;--soft:#222849;--ok:#6fd49a;--bad:#ff9a92;--okb:#16301f;--badb:#3a1c1a}}
@@ -75,12 +76,30 @@ h3.m{margin:1.2rem 0 .6rem;color:var(--mut);font-size:1rem}
 .score{display:flex;gap:1.5rem;margin-top:1rem;color:var(--mut)}
 .score b{color:var(--ink);font-size:1.2rem}
 select{font:inherit;padding:.5rem;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+header.hero{max-width:none;padding:0;background:linear-gradient(120deg,#17236b,#3342c4 55%,#7a3fb0);color:#fff}
+.hw{max-width:1040px;margin:0 auto;padding:1.5rem 1rem .9rem;display:flex;gap:1rem;align-items:center}
+.hw svg{flex:none;width:58px;height:58px}
+.hero p{color:#dfe3ff;margin:.3rem 0 0}
+.ends{max-width:1040px;margin:0 auto;padding:0 1rem 1.1rem;display:flex;flex-wrap:wrap;gap:.4rem}
+.ends span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:.15rem .7rem;font:700 .95rem Georgia,serif}
+h2::after{content:"";display:block;width:2.6rem;height:4px;border-radius:3px;background:linear-gradient(90deg,var(--acc),var(--acc2));margin-top:.45rem}
+.card{box-shadow:0 10px 24px -18px var(--acc)}
+.tc.in{border-top:4px solid var(--acc)}
+.tc.sj{border-top:4px solid var(--acc2)}
+h3.m{border-left:4px solid var(--acc);padding-left:.6rem}
+.q{background:var(--soft);border-radius:10px;padding:1rem 1.1rem}
+.min{display:inline-block;background:var(--soft);padding:.2rem .6rem;border-radius:8px;font-size:1.1rem}
+.tag{display:inline-block;background:var(--soft);color:var(--acc);border-radius:6px;padding:0 .45rem;font-weight:700;font-size:.82rem}
+.tag.tg2{color:var(--acc2)}
+.eq{color:var(--mut)}
 </style>
 </head>
 <body>
-<header>
-<h1>El verbo</h1>
-<p>Todo el temario en cinco bloques cortos, con los trucos de la guía y una zona de práctica. Calculado para estudiarlo en una hora.</p>
+<header class="hero">
+<div class="hw"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#fff" fill-opacity=".18"/><text x="32" y="46" font-family="Georgia,serif" font-size="40" font-weight="700" text-anchor="middle" fill="#fff">v</text></svg>
+<div><h1>El verbo</h1>
+<p>Todo el temario en cinco bloques cortos, con los trucos de la guía y una zona de práctica. Calculado para estudiarlo en una hora.</p></div></div>
+<div class="ends" aria-hidden="true"><span>-ar</span><span>-er</span><span>-ir</span><span>-ando</span><span>-iendo</span><span>-ado</span><span>-ido</span></div>
 </header>
 <nav><div id="tabs" role="tablist"></div></nav>
 <main>
@@ -158,6 +177,31 @@ select{font:inherit;padding:.5rem;border-radius:8px;border:1px solid var(--line)
 <p class="small mut">Sirve para el imperfecto y el futuro de subjuntivo.</p></div>
 <div class="card"><h3>Familia 3: el infinitivo</h3><p><b>Futuro:</b> infinitivo + é, ás, á, emos, éis, án.<br><b>Condicional:</b> infinitivo + ía, ías, ía, íamos, íais, ían.</p>
 <p>cantar &gt; cantar<b>é</b>, cantar<b>ía</b><br>Irregulares: saber &gt; sabré, poner &gt; pondré</p></div>
+<div class="card wide"><h3>Haber + participio: cada tiempo simple tiene su compuesto</h3>
+<p>Sí, también vale para el subjuntivo. Conjuga <b class="aux">haber</b> en el tiempo simple y añade el participio: sale el mismo tiempo en «perfecto».</p>
+<div class="scroll"><table><tr><th>Haber en…</th><th>Forma</th><th>Resultado</th></tr>
+<tr><td><span class="tag">Ind.</span> presente</td><td><b class="aux">he</b> cantado</td><td>pretérito perfecto compuesto</td></tr>
+<tr><td><span class="tag">Ind.</span> imperfecto</td><td><b class="aux">había</b> cantado</td><td>pretérito pluscuamperfecto</td></tr>
+<tr><td><span class="tag">Ind.</span> pretérito simple</td><td><b class="aux">hube</b> cantado</td><td>pretérito anterior</td></tr>
+<tr><td><span class="tag">Ind.</span> futuro</td><td><b class="aux">habré</b> cantado</td><td>futuro perfecto</td></tr>
+<tr><td><span class="tag">Ind.</span> condicional</td><td><b class="aux">habría</b> cantado</td><td>condicional perfecto</td></tr>
+<tr><td><span class="tag tg2">Subj.</span> presente</td><td><b class="aux">haya</b> cantado</td><td>pretérito perfecto compuesto</td></tr>
+<tr><td><span class="tag tg2">Subj.</span> imperfecto</td><td><b class="aux">hubiera / hubiese</b> cantado</td><td>pretérito pluscuamperfecto</td></tr>
+<tr><td><span class="tag tg2">Subj.</span> futuro</td><td><b class="aux">hubiere</b> cantado</td><td>futuro perfecto</td></tr></table></div></div>
+<div class="card wide"><h3>Subjuntivo: cómo acordarte</h3>
+<div class="grid">
+<div class="tl alt"><b>Cuándo se usa</b><br>Lo que no es un hecho: deseo, duda, probabilidad, necesidad o petición. Si la frase admite «ojalá» delante, es subjuntivo. Señales: <i>ojalá, para que, espero que, dudo que, es necesario que, cuando</i> + futuro (<i>cuando vengan</i>) y <i>si</i> + hipótesis (<i>si yo pensara</i>).</div>
+<div class="tl alt"><b>Presente: la vocal cambia de bando</b><br>-ar usa <b class="e">e</b> (cante) y -er/-ir usan <b class="e">a</b> (tema, parta). La raíz sale del «yo» del presente: tengo &gt; tenga.</div>
+<div class="tl alt"><b>Imperfecto: dos formas gemelas</b><br>«Ellos» del pretérito sin -ron + <b class="e">-ra</b> o <b class="e">-se</b>: tuvieron &gt; tuviera = tuviese. Tilde en nosotros: cantáramos.</div>
+<div class="tl alt"><b>Futuro: la -re</b><br>La misma base + <b class="e">-re</b>: tuviere, cantare. Casi no se usa hoy, pero se pregunta: reconócelo por la -re final.</div>
+<div class="tl alt"><b>Compuestos</b><br>haber + participio. Presente: <b class="aux">hay</b>a. Imperfecto y futuro: <b class="aux">hub</b>iera, <b class="aux">hub</b>iere.</div>
+<div class="tl alt"><b>No existen</b><br>El subjuntivo no tiene futuro ni condicional simples como el indicativo. Solo tiene presente, imperfecto y futuro, y sus tres compuestos.</div></div>
+<div class="scroll" style="margin-top:.8rem"><table><tr><th>Subjuntivo</th><th>cantar</th><th>temer</th><th>partir</th></tr>
+<tr><td>Presente</td><td>cante</td><td>tema</td><td>parta</td></tr>
+<tr><td>Imperfecto</td><td>cantara / cantase</td><td>temiera / temiese</td><td>partiera / partiese</td></tr>
+<tr><td>Futuro</td><td>cantare</td><td>temiere</td><td>partiere</td></tr></table></div></div>
+<div class="card"><h3>Imperativo: de dónde sale</h3>
+<p><b>Tú:</b> igual que «él» del presente de indicativo (canta, teme, parte).<br><b>Vosotros:</b> infinitivo cambiando -r por <b class="e">-d</b> (cantad, temed, partid).<br><b>Usted, nosotros y ustedes:</b> presente de subjuntivo (cante, cantemos, canten).</p></div>
 <div class="card"><h3>Persona y número casi universales</h3>
 <table><tr><td>yo</td><td>-o (presente) o vacío</td></tr><tr><td>tú</td><td>-s</td></tr><tr><td>él</td><td>vacío</td></tr><tr><td>nosotros</td><td>-mos</td></tr><tr><td>vosotros</td><td>-is (-áis, -éis, -ís)</td></tr><tr><td>ellos</td><td>-n</td></tr></table>
 <p class="small mut">Cuidado: el pretérito perfecto simple tiene las suyas (-é, -aste, -ó, -amos, -asteis, -aron) y la 2ª persona del singular acaba en -ste.</p></div>
@@ -175,7 +219,7 @@ select{font:inherit;padding:.5rem;border-radius:8px;border:1px solid var(--line)
 <div class="card">
 <div class="bar" style="align-items:center">
 <label for="mode" class="small mut">Modo</label>
-<select id="mode"><option value="all">Todo</option><option value="s">Solo tiempos simples</option><option value="c">Solo tiempos compuestos</option><option value="sub">Solo subjuntivo</option><option value="irr">Irregulares</option></select>
+<select id="mode"><option value="all">Todo</option><option value="ind">Solo indicativo</option><option value="sub">Solo subjuntivo</option><option value="imv">Solo imperativo</option><option value="nop">Gerundio, infinitivo y participio</option><option value="s">Solo tiempos simples</option><option value="c">Solo tiempos compuestos</option><option value="irr">Irregulares</option></select>
 <label class="small"><input type="checkbox" id="acc" checked> Exigir tildes</label>
 </div>
 <div class="q" id="q">Pulsa «Nueva pregunta» para empezar.</div>
@@ -210,7 +254,7 @@ function answers(i,sim,k,p){
  const pt=part(i),a=[H[k][p]+' '+pt];if(k==='subi')a.push(H.subis[p]+' '+pt);return a}
 function tenseCard(i,sim,t){
  let rows=PR.map((n,p)=>'<div class="row"><i>'+n+'</i><span>'+cell(i,sim,t[0],p)+'</span></div>').join('');
- return '<div class="card tc"><h3>'+t[1]+'</h3>'+rows+'</div>'}
+ return '<div class="card tc '+(t[2]==='Subjuntivo'?'sj':'in')+'"><h3>'+t[1]+'</h3>'+rows+'</div>'}
 function conj(i){
  const c=i.slice(-2),r=i.slice(0,-2),im=D[c].imv,g=c==='ar'?'ando':'iendo';
  const grp=(tt,sim)=>tt.map(t=>tenseCard(i,sim,t)).join('');
@@ -237,15 +281,21 @@ $('#hab').innerHTML=h+'</table>'})();
 // práctica
 const PV=['cantar','temer','partir','amar','hablar','comer','beber','correr','vivir','subir','aprender','bailar','trabajar','vender','decidir','saltar'];
 const IR=[['Presente, yo','tener','tengo','Irregular en la 1ª persona: teng-o. Pasa al subjuntivo y al imperativo.'],['Presente, yo','decir','digo','Cierre e a i y -g-: dig-o.'],['Presente, yo','mover','muevo','Diptongación o a ue: el acento cae en la raíz.'],['Presente, nosotros','querer','queremos','Sin diptongo: el acento no cae en la raíz.'],['Presente de subjuntivo, yo','poner','ponga','Parte del «yo» del presente: pongo.'],['Presente de subjuntivo, yo','decir','diga','Parte de «digo».'],['Presente de subjuntivo, yo','tener','tenga','Parte de «tengo».'],['Pretérito perfecto simple, él','pedir','pidió','Cierre vocálico e a i.'],['Pretérito perfecto simple, él','sentir','sintió','Cambio en el pretérito.'],['Pretérito perfecto simple, él','mentir','mintió','Igual que sentir.'],['Futuro, yo','saber','sabré','Pierde la vocal temática.'],['Futuro, yo','poner','pondré','Aparece una -d-.'],['Futuro, él','poder','podrá','Pierde la vocal temática: podr-á.'],['Futuro, yo','tener','tendré','Aparece una -d-.'],['Condicional, yo','querer','querría','Pierde la vocal temática: querr-ía.'],['Pretérito imperfecto de subjuntivo, ellos','tener','tuvieran/tuviesen','Parte de «tuvieron»: quita -ron y añade -ra o -se.']];
+const IM=['tú','él / ella (usted)','nosotros/-as','vosotros/-as','ellos / ellas (ustedes)'];
 let cur=null,done=false,sc=0,tot=0,st=0;
 const norm=s=>{s=s.trim().toLowerCase().replace(/\s+/g,' ');return $('#acc').checked?s:s.normalize('NFD').replace(/[\u0300-\u036f]/g,'')};
 const pick=a=>a[Math.floor(Math.random()*a.length)];
 function next(){
- const m=$('#mode').value;done=false;$('#res').className='res';$('#inp').value='';
+ const m=$('#mode').value;done=false;$('#res').className='res';$('#inp').value='';$('#inp').placeholder='Escribe la forma verbal';
  if(m==='irr'){const x=pick(IR);cur={ans:x[2].split('/'),show:'<b class="e">'+x[2].split('/').join(' / ')+'</b>',tip:x[3]};$('#q').innerHTML=x[0]+' de <b>'+x[1]+'</b>'}
- else{let pool=[];S.forEach((t,x)=>pool.push([1,x]));K.forEach((t,x)=>pool.push([0,x]));
-  if(m==='s')pool=pool.filter(x=>x[0]);if(m==='c')pool=pool.filter(x=>!x[0]);if(m==='sub')pool=pool.filter(x=>(x[0]?S:K)[x[1]][2]==='Subjuntivo');
-  const [sim,x]=pick(pool),t=(sim?S:K)[x],i=pick(PV),p=Math.floor(Math.random()*6);
+ else{let pool=[];S.forEach((t,x)=>pool.push([1,x]));K.forEach((t,x)=>pool.push([0,x]));pool.push([2,0],[3,0]);
+  const md=y=>y[0]>1?'':(y[0]?S:K)[y[1]][2];if(m==='s')pool=pool.filter(y=>y[0]===1);if(m==='c')pool=pool.filter(y=>y[0]===0);if(m==='ind')pool=pool.filter(y=>md(y)==='Indicativo');if(m==='sub')pool=pool.filter(y=>md(y)==='Subjuntivo');if(m==='imv')pool=[[2,0]];if(m==='nop')pool=[[3,0]];
+  const [sim,x]=pick(pool),i=pick(PV),p=Math.floor(Math.random()*6),r=i.slice(0,-2),c=i.slice(-2),pt=part(i);
+  if(sim>1){let q,a,sh;
+   if(sim===2){const n=Math.floor(Math.random()*5),e=D[c].imv[n];q='Imperativo, <b>'+IM[n]+'</b>, del verbo <b>'+i+'</b>';a=r+e;sh=hl([r,e])}
+   else{const g=c==='ar'?'ando':'iendo',L=[['Infinitivo compuesto','haber '+pt,hc('haber',pt)],['Gerundio simple',r+g,hl([r,g])],['Gerundio compuesto','habiendo '+pt,hc('habiendo',pt)],['Participio',pt,hl([r,pt.slice(r.length)])]],y=pick(L);q=y[0]+' del verbo <b>'+i+'</b>';a=y[1];sh=y[2]}
+   cur={ans:[a],show:sh,tip:''};$('#q').innerHTML=q;$('#inp').focus();return}
+  const t=(sim?S:K)[x];
   cur={ans:answers(i,sim,t[0],p),show:cell(i,sim,t[0],p),tip:''};
   $('#q').innerHTML=t[1]+' de '+t[2].toLowerCase()+', <b>'+PR[p]+'</b>, del verbo <b>'+i+'</b>'}
  $('#inp').focus()}
